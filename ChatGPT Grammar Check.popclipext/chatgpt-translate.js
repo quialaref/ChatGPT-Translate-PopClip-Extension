@@ -3,12 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.actions = void 0;
 const axios_1 = require("axios");
 
-const checkGrammar = async (input, options) => {
+const translateToEnglish = async (input, options) => {
   const openai = axios_1.default.create({
     baseURL: "https://api.openai.com/v1",
     headers: { Authorization: `Bearer ${options.apikey}` },
   });
-  const prompt = "Please correct the grammar and polish the following sentences, do not provide any translation, comments, or notes, and use the same language as input:\n\n";
+  const prompt = "Please translate the following sentences to English:\n\n";
   // send the whole message history to OpenAI
   const { data } = await openai.post("chat/completions", {
     model: "gpt-3.5-turbo",
@@ -28,6 +28,6 @@ const checkGrammar = async (input, options) => {
 };
 // export the actions
 exports.actions = [{
-  title: "ChatGPT: Grammar Check",
-  code: checkGrammar,
+  title: "ChatGPT: Translate to English",
+  code: translateToEnglish,
 }];
