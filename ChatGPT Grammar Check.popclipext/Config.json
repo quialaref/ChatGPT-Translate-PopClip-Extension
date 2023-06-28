@@ -1,15 +1,15 @@
 {
-  "name": "Grammar Check",
+  "name": "ChatGPT English Translator",
   "icon": "spell-check.svg",
   "identifier": "tw.hiraku.popclip.extension.chatgpt-grammar-check",
-  "description": "Send the selected text to ChatGPT and append the response. Hold Shift (⇧) to copy just the response.",
+  "description": "Send the selected text to ChatGPT and get the translation in English. Hold Shift (⇧) to copy just the response.",
   "note": "To use this extension you will need an <a href=\"https://platform.openai.com/account/api-keys\">OpenAPI API key</a>",
   "app": {
     "name": "ChatGPT",
     "link": "https://openai.com/blog/chatgpt"
   },
   "popclipVersion": 4069,
-  "module": "chatgpt-grammar-check.js",
+  "module": "chatgpt-english-translator.js",
   "entitlements": [
     "network"
   ],
